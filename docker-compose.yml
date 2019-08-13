@@ -5,7 +5,7 @@ services:
     build: ./
     hostname: web
     ports:
-      - "8002:8002"
+      - "8001:8001"
     env_file:
       - "envfile"
   mongodb:
