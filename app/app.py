@@ -23,7 +23,7 @@ mongo = PyMongo(application)
 application.json_encoder = JSONEncoder
 
 
-@application.route('/')
+@application.route('/', methods=['GET', 'POST'])
 def home():
     db_path = os.path.join(application.static_folder, 'catalogue/db.json')
     db = json.loads(open(db_path, 'r').read())
@@ -60,9 +60,9 @@ def home():
         post_data = {
             'merchant_id': 10000100, # non sandbox 11070985,
             'merchant_key': '46f0cd694581a', # non sandbox''22ha4oa68qbxa',
-            'return_url': 'https://www.pocketwallet.co.za/order-complete/',
-            'cancel_url': 'https://www.pocketwallet.co.za/order-cancelled/',
-            'notify_url': 'https://www.pocketwallet.co.za/notify-payment/',
+            'return_url': 'https://za.pocketwallet.co.za/order-complete/',
+            'cancel_url': 'https://za.pocketwallet.co.za/order-cancelled/',
+            'notify_url': 'https://za.pocketwallet.co.za/notify-payment/',
             'name_first': name,
             'name_last': surname,
             'email_address': email,
