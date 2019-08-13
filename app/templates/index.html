@@ -62,18 +62,6 @@
           </button>
         <div class="collapse navbar-collapse navbar-options" id="navbarNavDropdown">
           <ul class="nav flex-column colour-list">
-            <li>
-              <div class="flag mb-1 w-100" id="current-flag">
-                <img class="flag-img"
-                     {% if country == 'USA' %}
-                       src="{{ url_for('static', filename='img/flag_us.png') }}"
-                     {% else %}
-                       src="{{ url_for('static', filename='img/flag.png') }}"
-                     {% endif %}
-                     alt="USA">
-                <span class="text-muted pl-2">{{ country }}</span>
-              </div>
-            </li>
             <li class="nav-item">
               {% for link in links %}
                 <span class="dot nav-link {% if loop.index == 1 %}active{% endif %} text-secondary py-0 pl-0"
@@ -99,32 +87,11 @@
              id="section-{{ link.id }}"
              style="position: relative;">
           <div class="buy">
-            {% if country == 'USA' %}
-              <form class="needs-validation" novalidate action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="36QZXJW9M9XN4">
-                <select name="os0" class="form-control form-control-sm buy-form mb-1" style="display: none;">
-                  {% if promo %}
-                    <option value="Pocket Wallet (discounted)" selected>Pocket Wallet (discounted) $15.00 USD</option>
-                  {% else %}
-                    <option value="Pocket Wallet" selected>Pocket Wallet $30.00 USD</option>
-                  {% endif %}
-                </select>
-                <input type="hidden" name="os2" value="{{ link.colour_name }}">
-                <input type="hidden" name="currency_code" value="USD">
-                <span class="text-dark border bg-light border-dark pull-right"
-                      style="padding: .25rem .5rem; font-size: .875rem; line-height: 1.5;">
-                  ${% if promo %}15{% else %}30{% endif %}
-                </span>
-                <button type="submit" class="btn btn-dark btn-sm button-link rounded-0 pull-right" disabled>BUY NOW</button>
-              </form>
-            {% else %}
-              <span class="text-dark border bg-light border-dark pull-right"
-                    style="padding: .25rem .5rem; font-size: .875rem; line-height: 1.5;">
-                R150
-              </span>
-              <button type="button" id="zar-button" class="btn btn-dark btn-sm button-link rounded-0 pull-right" disabled>BUY NOW</button>
-            {% endif %}
+            <span class="text-dark border bg-light border-dark pull-right"
+                  style="padding: .25rem .5rem; font-size: .875rem; line-height: 1.5;">
+              R150
+            </span>
+            <button type="button" id="zar-button" class="btn btn-dark btn-sm button-link rounded-0 pull-right" disabled>BUY NOW</button>
           </div>
           <div id="carousel-{{ link.id }}" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
@@ -177,32 +144,6 @@
     </main>
     <div class="footer">
       © 2019 PocketWallet
-    </div>
-  </div>
-
-  <!-- Country Modal -->
-  <div class="modal fade" id="countryModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content text-center">
-        <div class="modal-header">
-          <h5 class="modal-title w-100">Choose Country</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <a href="/US/">
-            <img class=" flag-img flag-img-lg"
-                 src="{{ url_for('static', filename='img/flag_us.png') }}"
-                 alt="USA">
-          </a>
-          <a href="/ZA/">
-            <img class=" flag-img flag-img-lg"
-                 src="{{ url_for('static', filename='img/flag.png') }}"
-                 alt="ZA">
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 

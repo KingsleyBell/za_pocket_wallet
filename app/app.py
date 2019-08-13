@@ -24,7 +24,7 @@ application.json_encoder = JSONEncoder
 
 
 @application.route('/')
-def home(country='USA', promo=False):
+def home():
     db_path = os.path.join(application.static_folder, 'catalogue/db.json')
     db = json.loads(open(db_path, 'r').read())
     if request.method == 'POST':
@@ -79,25 +79,8 @@ def home(country='USA', promo=False):
     else:
         return render_template(
             'index.html',
-            links=db,
-            promo=promo,
-            country=country
+            links=db
         )
-
-
-@application.route('/US/')
-def us():
-    return home()
-
-
-@application.route('/ZA/', methods=['GET', 'POST'])
-def za():
-    return home(country='ZA')
-
-
-@application.route('/promo/')
-def promo():
-    return home(promo=True)
 
 
 @application.route('/order-cancelled/')

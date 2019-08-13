@@ -28,16 +28,6 @@ $(document).ready(function() {
     $(".carousel-item[index=" + index + "]").addClass("active");
   });
 
-  // Promo watermark background
-  Array.from(document.querySelectorAll('.watermarked')).forEach(function(el) {
-        el.dataset.watermark = (el.dataset.watermark + ' ').repeat(10000);
-  });
-
-  // Country modal
-  $("#current-flag").click(function(e) {
-    $('#countryModal').modal();
-  });
-
   // Order modal
   $("#zar-button").click(function(e) {
     $('#orderModal').modal();
@@ -92,8 +82,7 @@ $(document).ready(function() {
     $.ajax({
       type: "POST",
       url: deleteOrderUrl,
-      data: {'payment_id': paymentId},
-      success: function (data) {console.log('Successfully deleted ' + paymentId);}
+      data: {'payment_id': paymentId}
     });
     setTimeout(function(){ $('#orderModal').modal('show'); }, 500);
   });
