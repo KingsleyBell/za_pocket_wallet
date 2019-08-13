@@ -52,7 +52,8 @@ def home():
             'city': city,
             'country': country,
             'zip_code': zip_code,
-            'paid': False
+            'paid': False,
+            'shipped': False
         }
 
         mongo.db.orders.insert_one(data)
