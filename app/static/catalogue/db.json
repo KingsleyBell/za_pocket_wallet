@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Red Wallet",
+    "id": "red_wallet",
+    "colour": "#ca2728",
+    "colour_name": "red",
+    "images": [
+        "red_wallet/red.png",
+        "red_wallet/red_open.png"
+    ]
+  },
+  {
+    "name": "Orange Wallet",
+    "id": "orange_wallet",
+    "colour": "#e2501c",
+    "colour_name": "orange",
+    "images": [
+        "orange_wallet/orange.png",
+        "orange_wallet/orange_open.png"
+    ]
+  },
+  {
+    "name": "Yellow Wallet",
+    "id": "yellow_wallet",
+    "colour": "#f5b908",
+    "colour_name": "yellow",
+    "images": [
+        "yellow_wallet/yellow.png",
+        "yellow_wallet/yellow_open.png"
+    ]
+  },
+  {
+    "name": "Blue Wallet",
+    "id": "blue_wallet",
+    "colour": "#1c3683",
+    "colour_name": "blue",
+    "images": [
+        "blue_wallet/blue.png",
+        "blue_wallet/blue_open.png"
+    ]
+  },
+  {
+    "name": "Black Wallet",
+    "id": "black_wallet",
+    "colour": "#101110",
+    "colour_name": "black",
+    "images": [
+        "black_wallet/black.png",
+        "black_wallet/black_open.png"
+    ]
+  },
+  {
+    "name": "Grey Wallet",
+    "id": "grey_wallet",
+    "colour": "#afc5d0",
+    "colour_name": "grey",
+    "images": [
+        "grey_wallet/grey.png",
+        "grey_wallet/grey_open.png"
+    ]
+  }
+]

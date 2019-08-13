@@ -1,0 +1,25 @@
+version: '3'
+services:
+  pocket_wallet_web:
+    container_name: pocket_wallet_web
+    build: ./
+    hostname: web
+    ports:
+      - "8002:8002"
+    env_file:
+      - "envfile"
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles --logpath=/dev/null # --quiet
+networks:
+  default:
+    external:
+      name: websites

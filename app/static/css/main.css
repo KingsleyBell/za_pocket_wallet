@@ -1,0 +1,170 @@
+body {
+    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-size: 12px;
+    background-color: #f8f9fa;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#home-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar-sticky {
+    width: 100%;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 0;
+    right: 0;"
+}
+
+.navbar-options {
+    padding: 1.5rem 0;
+    max-width: 120px;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.button-link {
+    cursor: pointer;
+}
+
+.nav-link.active {
+    color: black !important;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block !important;
+}
+
+.colour-list {
+    max-width: 200px;
+}
+
+.item-img {
+    max-height: 85vh;
+    max-width: 100%;
+}
+
+.buy-form {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dot {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot:hover {
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+}
+
+.middle-middle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buy {
+    max-width: 190px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For devices: */
+    .buy {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .carousel {
+        position: absolute;
+        top: 50px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    /* For desktop: */
+    .sidebar-sticky {
+        position: fixed;
+        top: 3rem;
+        left: 3rem;
+    }
+
+    .site-heading {
+        margin-bottom: 1rem;
+    }
+
+    .buy {
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+    }
+}
+
+.watermarked::before {
+    position: fixed;
+    top: -75%;
+    left: -75%;
+
+    display: block;
+    width: 300%;
+    height: 300%;
+
+    transform: rotate(-45deg);
+    content: attr(data-watermark);
+
+    font-size: 30px;
+    opacity: 0.15;
+    line-height: 4em;
+    letter-spacing: 2px;
+    color: #d0d0d0;
+    z-index:-1;
+}
+
+.flag {
+    height: 35px;
+    position: relative;
+}
+
+#current-flag {
+    cursor: pointer;
+}
+
+.flag-img {
+    height: 35px;
+    border-radius: 50%;
+}
+
+.flag-img-lg {
+    height: 50px;
+    margin: 15px;
+}
+
+.flag-img:hover {
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+}
