@@ -62,7 +62,7 @@ $(document).ready(function() {
               "</li>"
             );
           });
-          var totalCost = parseInt($("#za-order-form input[name=quantity]").val()) * 150;
+          var totalCost = parseInt($("#za-order-form input[name=quantity]").val()) * 50;
           $("#cost-span").text("R" + totalCost);
           $("#confirm-list").append(
             "<li class='list-group-item pt-3' style='font-size: 1.5rem;'>" +
