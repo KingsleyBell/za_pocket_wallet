@@ -29,7 +29,9 @@ $(document).ready(function() {
   });
 
   // Order modal
-  $("#zar-button").click(function(e) {
+  $(".zar-button").click(function(e) {
+    var colourName = e.target.id;
+    $("#colour").val(colourName);
     $('#orderModal').modal();
   });
 
