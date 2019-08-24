@@ -59,8 +59,8 @@ def home():
         mongo.db.orders.insert_one(data)
 
         post_data = {
-            'merchant_id': 10000100, # non sandbox 11070985,
-            'merchant_key': '46f0cd694581a', # non sandbox''22ha4oa68qbxa',
+            'merchant_id': 11070985,
+            'merchant_key': '22ha4oa68qbxa',
             'return_url': 'https://za.pocketwallet.co.za/order-complete/',
             'cancel_url': 'https://za.pocketwallet.co.za/order-cancelled/',
             'notify_url': 'https://za.pocketwallet.co.za/notify-payment/',
@@ -68,7 +68,7 @@ def home():
             'name_last': surname,
             'email_address': email,
             'm_payment_id': payment_id,
-            'amount': quantity * 150,
+            'amount': quantity * 50,
             'item_name': f'Pocket Wallet (x {quantity})'
         }
 
