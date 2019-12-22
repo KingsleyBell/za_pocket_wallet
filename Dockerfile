@@ -8,6 +8,6 @@ RUN pip install -r /app/requirements.txt
 
 WORKDIR /app
 EXPOSE 8002
-CMD ["gunicorn", "-b", "0.0.0.0:8001", "app"]
+CMD ["gunicorn", "-b", "0.0.0.0:8006", "app"]
 
 
